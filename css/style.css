@@ -1,0 +1,96 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow-x: hidden; /* サイドバーがはみ出ないように */
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    position: fixed; /* ヘッダーを固定 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo-placeholder {
+    width: 50px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer; /* マウスオーバー時に指にする */
+}
+
+.wrapper {
+    display: flex;
+    margin-top: 50px; /* ヘッダーの高さ分下げる */
+    width: 100%;
+}
+
+/* サイドバーの初期状態 (画面左外) */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: white;
+    border-right: 1px solid black;
+    padding: 20px;
+    position: fixed;
+    top: 50px;
+    left: -290px; /* (幅+padding)分だけ左に隠す */
+    transition: left 0.3s ease; /* アニメーションを追加 */
+    z-index: 999;
+}
+
+/* サイドバーが表示されるときのクラス */
+.sidebar.active {
+    left: 0;
+}
+
+/* メインコンテンツエリア */
+main {
+    flex: 1;
+    padding: 20px;
+    margin-left: 0;
+    transition: margin-left 0.3s ease; /* メインエリアも動かす */
+}
+
+/* サイドバー表示時にメインエリアを右にずらす (オプション) */
+/*
+body.sidebar-active main {
+    margin-left: 250px;
+}
+*/
+
+.media-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.event-info {
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.logo-placeholder {
+    width: 50px;  /* 必要に応じてサイズを調整してください */
+    height: 50px;
+    cursor: pointer;
+    padding: 5px; /* ロゴ周りの余白 */
+}
+
+/* ロゴボタンの中の画像を、枠にぴったり収めるための設定 */
+.logo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 画像が歪まないようにする */
+}
