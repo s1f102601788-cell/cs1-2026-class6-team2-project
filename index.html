@@ -7,17 +7,35 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="side-menu" aria-label="site menu">
-        <h1>Menu</h1>
-        <a class="active" href="index.html">Top</a>
-        <a href="home.html">Home</a>
-        <a href="festival.html">Festival</a>
-        <a href="fes.html">Fes</a>
-    </nav>
+    <header>
+        <div id="logo-button" class="logo-placeholder">
+            <img src="images/website_logo.png" alt="menu">
+        </div>
+    </header>
 
-    <main class="main-content">
-        <h2>Top</h2>
-        <p>Select a page from the left menu.</p>
-    </main>
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar" aria-label="site menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a class="active" href="index.html">Top</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="festival.html">Festival</a></li>
+                <li><a href="fes.html">Fes</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="media-placeholder">
+                <p>Top</p>
+            </div>
+
+            <div class="event-info">
+                <h3>Information</h3>
+                <p>Select a page from the menu.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

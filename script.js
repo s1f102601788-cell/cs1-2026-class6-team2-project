@@ -1,10 +1,12 @@
-document.getElementById('logo-button').addEventListener('click', function() {
-    const sidebar = document.getElementById('sidebar');
-    const body = document.body;
+const logoButton = document.getElementById("logo-button");
 
-    // サイドバーに 'active' クラスを付け外しする
-    sidebar.classList.toggle('active');
+if (logoButton) {
+    logoButton.addEventListener("click", function () {
+        const sidebar = document.getElementById("sidebar");
 
-    // 必要に応じて、body全体にクラスを付けてメインエリアの動きを制御
-    body.classList.toggle('sidebar-active');
-});
+        if (sidebar) {
+            sidebar.classList.toggle("active");
+            document.body.classList.toggle("sidebar-active");
+        }
+    });
+}
